@@ -14,15 +14,15 @@
         response.setHeader("Pragma", "no-cache"); // HTTP 1.0
         response.setHeader("Expires", "0"); // Proxies
         
-        if (session != null) // if there was already a session created
+        if (session != null || !request.isRequestedSessionIdValid()) // if there was already a session created
         {
             if(session.getAttribute("username") != null) // if session already has a username, redirect to login
             {
                 session.removeAttribute("username");
                 session = request.getSession(false);
-
+                
                 response.sendRedirect("login.jsp");
-            }   
+            }  
         }
     %>
     

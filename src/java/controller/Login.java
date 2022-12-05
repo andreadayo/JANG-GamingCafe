@@ -7,7 +7,6 @@ package controller;
 import java.io.*;
 import java.util.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,14 +22,8 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String uname  = request.getParameter("uname");
-        String pass = request.getParameter("pass");
-        
         String jspPath = getServletContext().getRealPath("/");
         String txtFilePath = jspPath + "/userList.txt";
-        
-        // Create a Scanner class
-        Scanner scan = new Scanner(System.in);  
 
         // Read the contents of the file
         FileReader in = new FileReader(txtFilePath);
@@ -58,6 +51,10 @@ public class Login extends HttpServlet {
                 userList.put(userLine, passLine);
                 lineNo++;
         }
+        
+        String uname  = request.getParameter("uname");
+        String pass = request.getParameter("pass");
+        
         
         // Determine if user and pass match
         if (userList.containsKey(uname) && userList.get(uname).equals(pass))

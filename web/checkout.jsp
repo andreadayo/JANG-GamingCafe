@@ -87,8 +87,8 @@
             <td data-label="Quantity"><%= item.getItemQuantity() %></td>
             <td data-label="Item Price">PHP <%= item.getItemPrice() %></td>
             <td data-label="Action"><form method="POST" action="RemoveCart">
-                    <input type="hidden" name="name" value="<%= item.getItemName() %>" hidden/>
-                    <input type="hidden" name="price" value="<%=item.getItemPrice()%>" hidden/>
+                    <input type="hidden" name="name" value="<%= item.getItemName() %>" required/>
+                    <input type="hidden" name="price" value="<%=item.getItemPrice()%>" required/>
                     <input type="submit" name="remove" id="remove" value="Remove Item">
             </form>
             </td>  
@@ -141,7 +141,7 @@
                <input type="text" name="cusName" placeholder="Jane Doe" required><br>
 
                <label for="cusComputer" id="label">Computer No.</label>
-               <input type="number" name="cusAddress" placeholder="2" min="1" max="10" required><br>
+               <input type="number" name="cusComputer" placeholder="2" min="1" max="20" required><br>
 
                <input type="submit" name="place-order" id="place" value="Place order">
            </form>

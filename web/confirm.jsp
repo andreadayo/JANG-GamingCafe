@@ -123,7 +123,7 @@
      
         
         <form method="POST" action="ConfirmOrder">
-            <input type="hidden" name="total" value="<%= sum %>">
+            <input type="hidden" name="total" value="<%= sum %>" required>
             <input type="submit" name="confirm" id="confirm" value="Confirm order">
         </form>
       </div> 
