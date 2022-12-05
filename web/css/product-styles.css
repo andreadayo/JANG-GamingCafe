@@ -1,0 +1,197 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 3, 22, 4:36:46 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.950);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.header {
+  margin-top: -40px;
+  text-align: center;
+  background-color: var(--fierypink);
+}
+
+.header h1 {
+  font-size: 60px;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  padding: 10px;
+}
+
+p {
+  text-align: justify;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.cards {
+  width: 85%;
+  margin: 60px auto;
+  border-radius: 5px;
+}
+
+.flavor {
+  margin: 0;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 24px;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.price {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--fierypink);
+  letter-spacing: 0.5px;
+  float: right;
+}
+
+.image {
+    background-color: rgba(33, 37, 66, 0.749);
+    border-radius: 5px 5px 0 0;
+}
+
+.image img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-content {
+  background-color: var(--black);
+  padding: 24px 32px;
+  margin-top: -5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.card {
+  display: inline-block;
+  width: 32%;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  vertical-align: top;
+  filter: drop-shadow(3px 3px 10px rgba(152, 152, 152, 0));
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  filter: drop-shadow(3px 3px 15px rgba(152, 152, 152, 0));
+  transform: translate3d(0px, -5px, 0px);
+  transition: transform 0.5s;
+}
+
+#select {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+/* Grid with Flex */
+@supports (display: grid) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 16px;
+    grid-auto-rows: 1fr;
+  }
+
+  .card {
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+a {
+    text-decoration: none;
+}
+
+#view-cart {
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background-color: var(--fierypink);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: var(--white);
+    border: none;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#view-cart:hover {
+    background-color: var(--white);
+    color: var(--black);
+    top: -8px;
+    transition: 0.5s;
+}

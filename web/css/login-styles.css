@@ -1,0 +1,137 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 1, 22, 4:49:37 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.851);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  background-color: var(--white);
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.2));
+}
+
+.login-content {
+  margin: -15px 60px;
+}
+
+.login h1 {
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  color: var(--black);
+  font-size: 45px;
+}
+
+.login label {
+  color: var(--black);
+  font-size: 12px;
+}
+
+.login input[type=text], .login input[type=password] {
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 3px;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 14px;
+}
+
+.login input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin: 20px auto 50px auto;
+  box-sizing: border-box;
+  background-color: var(--black);
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: var(--white);
+  border: none;
+}
+
+.login input[type=submit]:hover {
+  background-color: var(--fierypink);
+  transition: 0.5s;
+}
+
+.login p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 10px;
+  color: var(--grey);
+}
+
+.login a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.login a:hover {
+  color: var(--red);
+}

@@ -1,0 +1,217 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 3, 22, 4:29:13 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.950);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.row {
+  margin: 40px 100px 0 100px;
+}
+
+.column1 {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 550px;
+}
+
+#product-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  justify-content: center;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.column2 {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 550px;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .column1 {
+    margin-bottom: 20px;
+  }
+
+  #product-image {
+    width: 300px;
+    height: auto;
+    margin: 30px auto 0 auto;
+  }
+
+  .column2 {
+    height: 350px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+#flavor {
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  font-size: 60px;
+  color: var(--fierypink);
+}
+
+#description {
+  text-align: justify;
+}
+
+#price {
+    color: var(--fierypink);
+}
+
+.quantity-container {
+  text-align: center;
+}
+
+.quantity-content {
+  display: inline-block;
+}
+
+form label {
+  display: inline-block;
+  color: var(--white);
+  font-weight: bold;
+}
+
+form input[type=number] {
+  display: inline-block;
+  width: 100px;
+  padding: 6px;
+  margin: 5px 0 5px 20px;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 3px;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 14px;
+  text-align: center;
+}
+
+#addcartbutton {
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background-color: var(--fierypink);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: var(--white);
+    border: none;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#addcartbutton:hover {
+    background-color: var(--white);
+    color: var(--black);
+    top: -8px;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) { 
+  .form-half {
+    vertical-align: top;
+  }
+
+  .form-left, .form-right {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-left {
+    margin-bottom: 15px;
+  }
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

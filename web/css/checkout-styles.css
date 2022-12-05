@@ -1,0 +1,274 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 1, 22, 4:49:37 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.950);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.header {
+  margin-top: -40px;
+  text-align: center;
+  background-color: var(--fierypink);
+}
+
+.header h1 {
+  font-size: 60px;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.center-page {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 60%; 
+}
+
+@media screen and (max-width: 900px) {
+  .center-page {
+    width: 85%; 
+  }
+}
+
+#title {
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    font-size: 80px;
+    text-align: center;
+}
+
+#subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+table {
+  border: 1px solid var(--black);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  border: 2px solid var(--black);
+  padding: .35em;
+  background-color: rgba(14, 17, 28, 0.750);
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th, #last-row {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: var(--black);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border: 2px solid var(--black);
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border: 1px solid var(--black);
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+#remove, #clear {
+    background-color: transparent;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--fierypink);
+    border: none;
+}
+
+#remove:hover, #clear:hover {
+    color: var(--white);
+}
+
+.cus-info-form-div {
+    width: 40%;
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .cus-info-form-div {
+    width: 95%;
+    margin: auto;
+    }
+}
+
+#cus-info {
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    font-weight: normal;
+    color: var(--fierypink);
+    text-align: center;
+}
+
+#cus-info-form {
+  display: inline-block;
+  color: var(--white);
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cus-info-content {
+    display: block;
+    margin: 0 auto;
+}
+
+#label {
+  width: 30%;
+  display: inline-block;
+}
+
+form input[type=text], form input[type=number] {
+  display: inline-block;
+  width: 55%;
+  padding: 6px;
+  margin: 5px 0 5px 20px;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 3px;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 14px;
+  text-align: center;
+}
+
+#place, #confirm {
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin: 40px auto;
+    box-sizing: border-box;
+    background-color: var(--fierypink);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: var(--white);
+    border: none;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#place:hover, #confirm:hover {
+    background-color: var(--white);
+    color: var(--black);
+    top: -8px;
+    transition: 0.5s;
+}

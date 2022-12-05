@@ -1,0 +1,111 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 3, 22, 6:05:11 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.851);
+  overflow-x: hidden;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 60px; /* footer height */
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* CONTENT */
+.header {
+  margin-top: -40px;
+  text-align: center;
+  background-color: var(--fierypink);
+}
+
+.header h1 {
+  font-size: 60px;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  padding: 10px;
+}
+
+#desc {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+#contact {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  color: var(--fierypink);  
+  margin-bottom: 20px;
+}
+
+.socials {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.socials img {
+    width: 100px;
+}
+
+#phonenum {
+  width: 25%;
+  float: left;
+}
+
+#gmail {
+  width: 50%;
+  white-space: nowrap;
+  float: left;
+}
+
+#twitter {
+  width: 25%;
+  float: right;
+}

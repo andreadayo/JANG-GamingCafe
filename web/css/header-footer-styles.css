@@ -1,0 +1,239 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 3, 22, 1:56:38 AM
+    Author     : Group 6 - 2CSA
+*/
+
+/* UNIVERSAL */
+:root {
+  --fierypink: #f84d5b;
+  --white: #ebebfe;
+  --lightblue: #373e72;
+  --darkblue: #0e111c; /* only for background */
+  --black: #080910; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen Mono', monospace;
+  color: var(--white);
+  background-color: var(--darkblue);
+  
+  background-image: url('../images/retro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(14, 17, 28, 0.851);
+  overflow-x: hidden;
+}
+
+.content-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .content-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* NAVBAR - responsive */
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: var(--black);
+  position: relative;
+  font-family: 'VT323', monospace;
+  z-index: 5;
+}
+
+.nav>.content-margin>.nav-header {
+  display: inline;
+}
+
+.nav>.content-margin>.nav-header>.nav-title {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 35px;
+  font-weight: lighter;
+  float: left;
+  color: #fff;
+}
+
+#jang {
+  color: var(--fierypink);
+}
+
+#cafe {
+  color: var(--white);
+}
+
+.nav>.content-margin>.nav-btn {
+  display: none;
+}
+
+.nav>.content-margin>.nav-links {
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+  width: 50%;
+}
+
+.nav>.content-margin>.nav-links>a {
+  display: inline;
+  float: right;
+  color: var(--white);
+  text-align: right;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#login {
+  color: var(--fierypink);
+}
+
+#login:hover {
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#logout {
+  color: var(--fierypink);
+  background-color: transparent;
+  display: inline;
+  float: right;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'VT323', monospace;
+  border: none;
+}
+
+#logout:hover {
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>.content-margin>.nav-links>a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--fierypink);
+}
+
+.nav>.content-margin>#nav-check {
+  display: none;
+}
+
+@media (max-width:900px) {
+  .hamburger {
+    margin-top: 14px;
+    margin-left: 12px;
+  }
+
+  .nav>.content-margin>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav>.content-margin>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav>.content-margin>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>.content-margin>label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav>.content-margin>.nav-btn>label>.hamburger>span {
+    display: block;
+    width: 22px;
+    height: 10px;
+    border-top: 2px solid var(--white);
+  }
+
+  .nav>.content-margin>.nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: var(--black);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 80px;
+    left: 0px;
+  }
+
+  .nav>.content-margin>.nav-links>a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav>.content-margin>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+  }
+
+  .nav>.content-margin>#nav-check:checked~.nav-links {
+    height: 250px;
+    overflow-y: auto;
+  }
+  
+  #logout {
+  width: 100%;
+  text-align: right;
+ }
+}
+
+/* FOOTER */
+.footer {
+  height: 60px;
+  background-color: var(--black);
+  font-family: 'VT323', monospace;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-left p {
+  color: var(--white);
+  margin: 20px;
+  float: left;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.footer-right {
+  float: right;
+  padding-top: 20px;
+}
+
+.footer-right a {
+  color: var(--lightblue);
+  padding: 30px 0 0 60px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.footer-right a:hover {
+  color: var(--fierypink);
+}
+
+@media screen and (max-width: 600px) {
+  .footer-right a {
+    display: none;
+  }
+}
