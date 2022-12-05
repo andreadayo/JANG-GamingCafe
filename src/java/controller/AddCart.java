@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Item;
+import model.ProductInfo;
 
 /**
  *
@@ -89,7 +90,7 @@ public class AddCart extends HttpServlet {
         // pass updated value to jsp page
             session.setAttribute("cartItemList", arrayList);
             request.getRequestDispatcher("product-priv.jsp").forward(request, response);
-            session.setAttribute("cartItemList", arrayList);
+        
         } else {
             arrayList.add(item);
             request.getServletContext().setAttribute("cartItemList", arrayList);

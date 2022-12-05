@@ -48,7 +48,13 @@
        <!-- CONTENT -->
         <div class="row">
             <div class="column1">
-              <img src="images/gamer-pixel.jpg" id="product-image">
+              <% 
+                String path = "";
+                if(request.getAttribute("fullpath")!=null)
+                    path = request.getAttribute("fullpath").toString();
+               %>
+               
+              <img src='<%=path%>' id="product-image">
             </div> 
 
             <div class="column2">

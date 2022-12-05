@@ -40,17 +40,17 @@ public class Item {
     }
 
     /**
-     * @return the itemVariation
+     * @return the itemPrice
      */
-    public String getItemVariation() {
-        return itemVariation;
+    public int getItemStock() {
+        return itemStock;
     }
 
     /**
-     * @param itemVariation the itemVariation to set
+     * @param itemPrice the itemPrice to set
      */
-    public void setItemVariation(String itemVariation) {
-        this.itemVariation = itemVariation;
+    public void setItemStock(int itemStock) {
+        this.itemStock = itemStock;
     }
 
     /**
@@ -69,7 +69,7 @@ public class Item {
 
     private String itemName;
     private int itemPrice;
-    private String itemVariation;
+    private int itemStock;
     private int itemQuantity;
     private String submit;
 
